@@ -42,9 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         enabled: true,
                         mode: 'index',
                         intersect: true
-                        // Other tooltip options: callbacks, backgroundColor, etc.
                     },
-                    // Other options for layout, interaction, etc.
                 }
             });
             
