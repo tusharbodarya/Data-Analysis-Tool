@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/get_data')
         .then(response => response.json())
         .then(data => {
-            const labels = data.map(item => item.label_field); // Replace label_field with your field name
-            const values = data.map(item => item.value_field); // Replace value_field with your field name
+            const labels = data.map(item => item.label_field);
+            const values = data.map(item => item.value_field);
 
             let ctx = document.getElementById('myChart').getContext('2d');
             let myChart = new Chart(ctx, {
@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 options: {
                     scales: {
                         y: {
-                            beginAtZero: true // Start y-axis from zero
-                            // Other y-axis options: min, max, stepSize, etc.
+                            beginAtZero: true
                         }
                     },
                     plugins: {
@@ -32,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         legend: {
                             display: true,
-                            position: 'top' // Position: top, bottom, left, right
+                            position: 'top'
                         },
                     },
                     animation: {
-                        duration: 1500, // Animation duration in milliseconds
-                        easing: 'easeInOutQuart' // Easing function for animation
+                        duration: 1500,
+                        easing: 'easeInOutQuart'
                     },
                     tooltips: {
                         enabled: true,
